@@ -24,7 +24,7 @@ $(document).ready(function(){
 			}
 		});
 		if( $(this).find("input[name=phone]").length ){
-			$(this).find("input[name=phone]").mask(tePhone,{placeholder:"_"});
+			$(this).find("input[name=phone]").mask(tePhone,{placeholder:" "});
 		}
 	});
 
@@ -43,14 +43,11 @@ $(document).ready(function(){
 		$this.fancybox({
 			padding : 0,
 			content : $popup,
-			fitToView: false,
 			helpers: {
 	         	overlay: {
-	            	locked: true
-
+	            	locked: true 
 	         	}
 	      	},
-
 			beforeShow: function(){
 				$popup.find(".custom-field").remove();
 				if( $this.attr("data-value") ){
@@ -62,9 +59,6 @@ $(document).ready(function(){
 				}
 			},
 			afterShow: function(){
-				if($(".popup-text:visible").length) {
-					$(".fancybox-close").css("background-image",'url("i/popup-close-grey.png")');
-				}
 				if( $this.attr("data-afterShow") && customHandlers[$this.attr("data-afterShow")] ){
 					customHandlers[$this.attr("data-afterShow")]($this);
 				}
@@ -82,7 +76,7 @@ $(document).ready(function(){
 		});
 	});
 
-	$(".b-go").on("click",function(){
+	$(".b-go").click(function(){
 		var block = $( $(this).attr("data-block") ),
 			off = $(this).attr("data-offset")||0;
 		$("body, html").animate({
@@ -111,10 +105,9 @@ $(document).ready(function(){
 				success: function(msg){
 					var $form;
 					if( msg == "1" ){
-						window.location.href = "thankyou.html";
-
+						$form = $thanks;
 					}else{
-						alert("Оишбка отправки! Попробуйте позже");
+						$form = $("#b-popup-error");
 					}
 
 					if( $this.attr("data-afterAjax") && customHandlers[$this.attr("data-afterAjax")] ){
@@ -122,6 +115,18 @@ $(document).ready(function(){
 					}
 
 					$this.find("input[type=text],textarea").val("");
+					$.fancybox.open({
+						content : $form,
+						padding : 0,
+				        afterShow: function(){
+				            setTimeout(function(){
+				                $('.fancybox-wrap').css('position','absolute');
+				                $('.fancybox-inner').css('height','auto');
+				                $('html').addClass('fancybox-margin').addClass('fancybox-lock');
+				                $('.fancybox-overlay').html($('.fancybox-wrap'));
+				            },100);
+				        }
+					});	
 				}
 			});
   		}

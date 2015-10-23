@@ -92,4 +92,9 @@ $(document).ready(function(){
         }
         return false;
     });
+
+    customHandlers["popup"] = function(el){
+        $(".b-popup h2").text(el.parents(".example-page").find(".buy").attr("data-value"));
+        $(".b-buy-butt").attr("data-value",el.parents(".example-page").find(".buy").attr("data-value")).attr("data-name","Шаблон");
+    };
 });
