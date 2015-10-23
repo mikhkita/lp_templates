@@ -77,8 +77,7 @@ $(document).ready(function(){
     // var jssor_slider1 = new $JssorSlider$("slider1_container", options);
 
     $( ".tabs" ).tabs({
-        active: 0,
-         show: { effect: "fadeIn", duration: 400 }
+        active: 0
     });
 
     $("#b-categories li").click(function(){
