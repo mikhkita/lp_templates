@@ -92,4 +92,9 @@ $(document).ready(function(){
         }
         return false;
     });
+    $(".category-checkbox").change(function(){
+        if($(this).parent().hasClass("active")) {
+            $(this).parent().removeClass("active");
+        } else $(this).parent().addClass("active");
+    });
 });

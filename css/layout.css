@@ -483,16 +483,47 @@ h1,h2,h3,h4,h5,h6 {
 			margin-top: 10px;
 			margin-bottom: 15px;
 		}
-		.page-price ul .text-left {
-			float: left;
-			font-size: 110%;
-			margin-top: 7px;
+		.page-price label {
+			font-size: 16px;
+			font-family: "robotolight";
+			color: rgb(51, 51, 51);
+			line-height: 1.375;
+			position: relative;
+			display: block;
+			padding-left: 30px;
+			cursor: pointer;
 		}
-		.page-price ul .text-right {
-			float: right;
-			font-size: 150%;
-			font-family: 'robotobold';
+			.page-price label:before {
+				position: absolute;
+				font-size: 0;
+				content: "";
+				width: 12px;
+				height: 12px;
+				background: #fff;
+				border: 2px solid #a1a1a1;
+				left: 6px;
+				top: 3px;
+				border-radius: 5px;
+			}
+			.page-price label.active:before {
+				background-color: #00eab5;
+			}
+			.page-price label input {
+				display: none;
+			}
+		.page-price ul {
+			margin-top: 15px;
 		}
+			.page-price ul .text-left {
+				float: left;
+				font-size: 110%;
+				margin-top: 7px;
+			}
+			.page-price ul .text-right {
+				float: right;
+				font-size: 150%;
+				font-family: 'robotobold';
+			}
 	.page-button {
 		background: rgba(154,168,178,0.85);
 		padding: 12px 10px;
