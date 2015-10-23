@@ -502,7 +502,7 @@
 										<a href="#" class="fancy watch white" data-block="#b-popup-detail" data-beforeShow="popup">ПРОСМОТР</a>
 									</li>
 									<li>
-										<a href="#" class="buy white fancy" data-block='#b-popup-1' data-value="Аренда квартир" data-name="Шаблон">КУПИТЬ</a>
+										<a href="#" class="buy white fancy" data-block='#b-popup-1' data-value="Аренда квартир" data-beforeShow="popup-buy" data-name="Шаблон">КУПИТЬ</a>
 									</li>
 								</ul>
 							</div>
@@ -542,7 +542,7 @@
 										<a href="#" class="fancy watch white" data-block="#b-popup-detail" data-beforeShow="popup">ПРОСМОТР</a>
 									</li>
 									<li>
-										<a href="#" class="buy white fancy" data-block="#b-popup-1" data-value="Натяжные потолки" data-name="Шаблон">КУПИТЬ</a>
+										<a href="#" class="buy white fancy" data-block="#b-popup-1" data-value="Натяжные потолки" data-beforeShow="popup-buy" data-name="Шаблон">КУПИТЬ</a>
 									</li>
 								</ul>
 							</div>
@@ -582,7 +582,7 @@
 										<a href="#" class="fancy watch white" data-block="#b-popup-detail" data-beforeShow="popup">ПРОСМОТР</a>
 									</li>
 									<li>
-										<a href="#" class="buy white fancy" data-block="#b-popup-1" data-value="Продажа мяса" data-name="Шаблон">КУПИТЬ</a>
+										<a href="#" class="buy white fancy" data-block="#b-popup-1" data-value="Продажа мяса" data-beforeShow="popup-buy" data-name="Шаблон">КУПИТЬ</a>
 									</li>
 								</ul>
 							</div>
@@ -622,7 +622,7 @@
 										<a href="#" class="fancy watch white" data-block="#b-popup-detail" data-beforeShow="popup">ПРОСМОТР</a>
 									</li>
 									<li>
-										<a href="#" class="buy white fancy" data-block="#b-popup-1" data-value="Ремонт ноутбуков" data-name="Шаблон">КУПИТЬ</a>
+										<a href="#" class="buy white fancy" data-block="#b-popup-1" data-value="Ремонт ноутбуков" data-beforeShow="popup-buy" data-name="Шаблон">КУПИТЬ</a>
 									</li>
 								</ul>
 							</div>
@@ -662,7 +662,7 @@
 										<a href="#" class="fancy watch white" data-block="#b-popup-detail" data-beforeShow="popup">ПРОСМОТР</a>
 									</li>
 									<li>
-										<a href="#" class="buy white fancy" data-block="#b-popup-1" data-value="Электромонтажные работы" data-name="Шаблон">КУПИТЬ</a>
+										<a href="#" class="buy white fancy" data-block="#b-popup-1" data-value="Электромонтажные работы" data-beforeShow="popup-buy" data-name="Шаблон">КУПИТЬ</a>
 									</li>
 								</ul>
 							</div>
@@ -702,7 +702,7 @@
 										<a href="#" class="fancy watch white" data-block="#b-popup-detail" data-beforeShow="popup">ПРОСМОТР</a>
 									</li>
 									<li>
-										<a href="#" class="buy white fancy" data-block="#b-popup-1" data-value="Прокат автомобилей" data-name="Шаблон">КУПИТЬ</a>
+										<a href="#" class="buy white fancy" data-block="#b-popup-1" data-value="Прокат автомобилей" data-beforeShow="popup-buy" data-name="Шаблон">КУПИТЬ</a>
 									</li>
 								</ul>
 							</div>
@@ -742,7 +742,7 @@
 										<a href="#" class="fancy watch white" data-block="#b-popup-detail" data-beforeShow="popup">ПРОСМОТР</a>
 									</li>
 									<li>
-										<a href="#" class="buy white fancy" data-block="#b-popup-1" data-value="Продажа кондиционеров" data-name="Шаблон">КУПИТЬ</a>
+										<a href="#" class="buy white fancy" data-block="#b-popup-1" data-value="Продажа кондиционеров" data-beforeShow="popup-buy" data-name="Шаблон">КУПИТЬ</a>
 									</li>
 								</ul>
 							</div>
@@ -782,7 +782,7 @@
 										<a href="#" class="fancy watch white" data-block="#b-popup-detail" data-beforeShow="popup">ПРОСМОТР</a>
 									</li>
 									<li>
-										<a href="#" class="buy white fancy" data-block="#b-popup-1" data-value="Грузовые международные перевозки" data-name="Шаблон">КУПИТЬ</a>
+										<a href="#" class="buy white fancy" data-block="#b-popup-1" data-value="Грузовые международные перевозки" data-beforeShow="popup-buy" data-name="Шаблон">КУПИТЬ</a>
 									</li>
 								</ul>
 							</div>
@@ -822,7 +822,7 @@
 										<a href="#" class="fancy watch white" data-block="#b-popup-detail" data-beforeShow="popup">ПРОСМОТР</a>
 									</li>
 									<li>
-										<a href="#" class="buy white fancy" data-block="#b-popup-1" data-value="Настройка яндекс директ и google adwords" data-name="Шаблон">КУПИТЬ</a>
+										<a href="#" class="buy white fancy" data-block="#b-popup-1" data-value="Настройка яндекс директ и google adwords" data-beforeShow="popup-buy" data-name="Шаблон">КУПИТЬ</a>
 									</li>
 								</ul>
 							</div>
@@ -1161,6 +1161,7 @@
 					<div class="b-popup-form">
 						<input type="text" id="email" name="email" required/>
 						<input type="hidden" name="subject" value="Заказ шаблона"/>
+						<input type="hidden" name="kit" class="b-kit-input"/>
 						<input type="submit" class="ajax b-orange-butt" value="Заказать">
 					</div>
 				</form>

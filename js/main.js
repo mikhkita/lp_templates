@@ -97,6 +97,18 @@ $(document).ready(function(){
         $(".b-popup h2").text(el.parents(".example-page").find(".buy").attr("data-value"));
         $(".b-buy-butt").attr("data-value",el.parents(".example-page").find(".buy").attr("data-value")).attr("data-name","Шаблон");
     };
+
+    customHandlers["popup-buy"] = function(el){
+        var $cont = el.parents(".example-page"),
+            string = [];
+
+        $cont.find("input:checked").each(function(){
+            string.push($(this).val());
+        });
+
+        $(".b-kit-input").val(string.join(", "));
+    };
+
     $(".category-checkbox").change(function(){
         if($(this).parent().hasClass("active")) {
             $(this).parent().removeClass("active");

@@ -7,7 +7,7 @@
 	$from = "“LP Templates”";
 	$email_from = "robot@taxi-chita.ru";
 
-	$deafult = array("name"=>"Имя","phone"=>"Телефон", "email"=>"E-mail");
+	$deafult = array("name"=>"Имя","phone"=>"Телефон", "email"=>"E-mail", "kit" => "Набор");
 
 	$fields = array();
 
