@@ -80,7 +80,13 @@ h1,h2,h3,h4,h5,h6 {
 .black {
 	color: #000;
 }
-
+.fancybox-close {
+	background-image: url("../images/popup-close.png");
+	width: 31px;
+	height: 32px;
+	right: 14px;
+	top: 15px;
+}
 .b {
 	position: relative;
 }
@@ -172,6 +178,7 @@ h1,h2,h3,h4,h5,h6 {
 	}
 	.b3-list {
 		margin-top: 20px;
+		text-align: center;
 	}
 		.b3-list li.three {
 			margin: 0px;
@@ -222,7 +229,7 @@ h1,h2,h3,h4,h5,h6 {
 		.b3-list-p {
 			color: #fff;
 			text-align: center;
-			font-size: 90%;
+			font-size: 16px;
 			margin-top: 25px;
 			margin-bottom: 50px;
 		}
@@ -266,20 +273,20 @@ h1,h2,h3,h4,h5,h6 {
 .tabs-menu	{
 	width: 100%;
 }
-	.tabs-menu ul {
+	.tabs-menu {
 		display: table-row;
 		width: 100%;
 	}
-		.tabs-menu ul li {
+		.tabs-menu li {
 			display: table-cell;
 			height: 90px;
 			border-right: 5px solid #fff;
 			width: 1%;
 		}
-			.tabs-menu ul li:last-child {
+			.tabs-menu li:last-child {
 				border-right: none;
 			}
-				.tabs-menu ul li a {
+				.tabs-menu li a {
 					font-family: 'robotoregular';
 					display: block;
 					color: #fff;
@@ -291,10 +298,10 @@ h1,h2,h3,h4,h5,h6 {
 					border-top-right-radius: 3px;
 					height: 85px;
 				}
-				.tabs-menu ul li a:hover, .tabs-menu ul li a.active {
-					background-color: #3d4b5a;
+				.ui-state-default a:hover, .ui-tabs-active a{
+					background-color: #3d4b5a !important;
 				}
-				.tabs-menu ul li a.active {
+				.ui-tabs-active a{
 					border-bottom: 4px solid #3d4b5a; 
 				}
 
@@ -555,6 +562,7 @@ h1,h2,h3,h4,h5,h6 {
 		}
 			.b8-sentence ul li:last-child p {
 				text-align: center;
+				margin-bottom: 15px;
 			}
 		.green-check {
 			padding: 6px;
@@ -608,31 +616,31 @@ h1,h2,h3,h4,h5,h6 {
 	background-color: #6a7f8e;
 }
 	.b9-list li {
-		margin-right: 50px;
+		margin-right: 79px;
 		text-align: center;
+	}
+	.b9-list li:last-child {
+		margin-right: 0;
 	}
 	.b9-list-p  p {
 		width: 200px;
 	}
-	.know_more {
-		margin: 0% 33%;
-		margin-bottom: 60px;
-	}
-		.know_more a {
-				font-family: 'robotolight';
-				font-size: 20px;
-				padding: 10px 50px;
-				display: block;
-				border: 2px solid #fff;
-				border-radius: 3px;
-				color: #fff;
-				text-align: center;
-				width: 210px;
-			}
-		.know_more a:hover {
-			background-color: #00ca97;
-			border: 2px solid #00ca97;
+	.know_more{
+			font-family: 'robotolight';
+			font-size: 20px;
+			padding: 10px 50px;
+			display: inline-block;
+			border: 2px solid #fff;
+			border-radius: 3px;
+			color: #fff;
+			text-align: center;
+			width: 210px;
+			margin-bottom: 105px;
 		}
+	.know_more:hover {
+		background-color: #00ca97;
+		border: 2px solid #00ca97;
+	}
 
 .b10-content {
 	margin-top: 30px;
@@ -781,3 +789,173 @@ h1,h2,h3,h4,h5,h6 {
 		font-family: 'robotolight';
 		color: #222;
 	}	
+.b-popup {
+	width: 1050px;
+	background-color: #3d4b5a;
+}
+	.b-popup > .left {
+		width: 498px;
+		padding: 63px 13px 80px 21px;
+		box-sizing: border-box;
+	}
+		.b-popup > .left h2 {
+			font-size: 37px;
+			font-family: "robotomedium";
+			color: rgb(255, 255, 255);
+			text-transform: uppercase;
+			line-height: 1.622;
+			text-align: center;
+		}
+		.b-popup > .left img{
+			width: 100%;
+			margin: 32px 0 43px;
+		}
+		.b-popup > .left a {
+			width: 100%;
+			display: block;
+			text-align: center;
+			border-radius: 5px;
+			font-size: 29px;
+			font-family: "robotolight";
+			box-sizing: border-box;
+			line-height: 2.069;
+			text-transform: uppercase;
+		}
+	.b-popup > .right {
+		width: 552px;
+		margin: 7px 0;
+		background-color: #6a7f8e;
+		padding: 33px 14px 33px 22px;
+		box-sizing: border-box;
+	}
+		.b-popup > .right h3 {
+			font-size: 24px;
+			font-family: "robotolight";
+			color: rgb(255, 255, 255);
+			margin-bottom: 23px;
+		}	
+		.b-popup > .right ul {
+
+		}
+			.b-popup > .right ul li {
+				float: left;
+				margin-right: 1px;
+			}
+			.b-popup > .right ul li:last-child {
+				margin-right: 0;
+			}
+				.b-popup > .right ul li a {
+					font-size: 15px;
+					font-family: "robotolight";
+					color: rgb(255, 255, 255);
+					padding: 2px 7px 8px;
+					background-color: #00c997;
+					border-top-left-radius: 3px;
+					border-top-right-radius: 3px;
+					display: block;
+				}
+				.b-popup > .right ul li.ui-tabs-active a{
+					border-bottom: none;
+				}
+		.b-popup > .right .popup-tabs-content {
+
+padding: 37px 40px 32px 20px;
+
+margin-right: 1px;
+
+background-color: #fff;
+
+}
+			.b-popup > .right .popup-tabs-content img{
+			
+margin-right: 31px;
+			}
+			.b-popup > .right .popup-tabs-content p {
+				font-size: 15px;
+				font-family: "robotolight";
+				color: rgb(68, 68, 68);
+				line-height: 1.4;
+			}
+		.b-popup > .right .popup-checkbox {
+
+margin-top: 30px;
+
+}
+			.b-popup > .right .popup-checkbox .left {
+				
+			}
+				.b-popup > .right .popup-checkbox .left input {
+					display: none;
+				}
+				.b-popup > .right .popup-checkbox .left label {
+					font-size: 16px;
+					font-family: "robotolight";
+					color: rgb(255, 255, 255);
+					line-height: 1.25;
+					display: block;
+					position: relative;
+					padding-left: 36px;
+					margin-bottom: 5px;
+					cursor: pointer;
+				}
+					.b-popup > .right .popup-checkbox .left label:before {
+						position: absolute;
+						font-size: 0;
+						content: "";
+						width: 13px;
+						height: 13px;
+						background:none;
+						border: 2px solid #fff;
+						left: 4px;
+						top: 1px;
+						border-radius: 4px;
+					}
+					.b-popup > .right .popup-checkbox .left input:checked + label:before {
+						background-color: #00eab5;
+					}
+			.b-popup > .right .popup-checkbox div:first-child {
+				margin-right: 11px;
+			}
+		.b-popup > .right .popup-price {
+
+margin-top: 30px;
+
+border-top: 1px solid #fff;
+
+margin: 30px 6px 0;
+
+padding-top: 20px;
+
+padding-left: 4px;
+
+}
+			.b-popup > .right .popup-price h4 {
+				font-size: 24px;
+				font-family: "robotolight";
+				color: rgb(255, 255, 255);
+				margin-top: 16px;
+				text-transform: uppercase;
+			}
+			.b-popup > .right .popup-price h5 {
+				font-size: 36px;
+				font-family: "robotobold";
+				color: rgb(255, 255, 255);
+				margin-left: 47px;
+				margin-top: 4px;
+			}
+			.b-popup > .right .popup-price input {
+				font-size: 30px;
+				font-family: "robotolight";
+				color: rgb(255, 255, 255);
+				border-radius: 5px;
+				width: 185px;
+				border: none;
+				margin-left: 31px;
+				text-transform: uppercase;
+				padding: 5px 0;
+				background-color: #00c997;
+				cursor: pointer;
+			}
+				.b-popup > .right .popup-price input:hover {
+					background-color: #049873;
+				}
