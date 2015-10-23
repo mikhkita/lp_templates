@@ -274,14 +274,17 @@ h1,h2,h3,h4,h5,h6 {
 	width: 100%;
 }
 	.tabs-menu {
-		display: table-row;
+		display: table;
 		width: 100%;
 	}
 		.tabs-menu li {
 			display: table-cell;
 			height: 90px;
 			border-right: 5px solid #fff;
-			width: 1%;
+			vertical-align: middle;
+			border-bottom: 4px solid #fff;
+			background-color: #00c997;
+			padding: 0 40px;
 		}
 			.tabs-menu li:last-child {
 				border-right: none;
@@ -290,19 +293,14 @@ h1,h2,h3,h4,h5,h6 {
 					font-family: 'robotoregular';
 					display: block;
 					color: #fff;
-					width: auto;
 					text-align: center;
-					padding: 25px 0px 15px;
 					background-color: #00c997;
-					border-top-left-radius: 3px;
-					border-top-right-radius: 3px;
-					height: 85px;
 				}
-				.ui-state-default a:hover, .ui-tabs-active a{
+				.ui-state-default:hover,.ui-state-default:hover a, .ui-tabs-active a,.ui-tabs-active{
 					background-color: #3d4b5a !important;
 				}
-				.ui-tabs-active a{
-					border-bottom: 4px solid #3d4b5a; 
+				.tabs-menu .ui-tabs-active {
+					 border-bottom: 4px solid #3d4b5a !important; 
 				}
 
 	.tabs-content {
@@ -840,6 +838,8 @@ h1,h2,h3,h4,h5,h6 {
 			.b-popup > .right ul li {
 				float: left;
 				margin-right: 1px;
+				border-top-left-radius: 3px;
+				border-top-right-radius: 3px;
 			}
 			.b-popup > .right ul li:last-child {
 				margin-right: 0;
