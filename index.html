@@ -41,13 +41,13 @@
 			</div>
 			<div class="b-menu-list left">
 				<ul>
-					<li>
+					<li class="b-go" data-block=".b-5">
 						<a href="#">Что входит в комплект</a>
 					</li>
-					<li>
+					<li class="b-go" data-block=".b-7">
 						<a href="#">Каталог шаблонов</a>
 					</li>
-					<li>
+					<li class="b-go" data-block=".b-9">
 						<a href="#">Дополнительные услуги</a>
 					</li>
 				</ul>
@@ -80,7 +80,7 @@
 			<div class="b-h2 white">
 				<h2>СДЕЛАЙТЕ ВАШИ ПЕРВЫЕ ПРОДАЖИ ЗА 5 ШАГОВ</h2>
 			</div>
-			<div class="b3-list left">
+			<div class="b3-list">
 				<ul>
 					<li>
 						<div class="b3-list-content">
@@ -336,7 +336,7 @@
 			<div class="b-h2 white">
 				<h2>КАК ПОЛУЧИТЬ НАШ ШАБЛОН?</h2>
 			</div>
-			<div class="b3-list left">
+			<div class="b3-list">
 				<ul>
 					<li>
 						<div class="b3-list-content">
@@ -449,26 +449,26 @@
 			</div>
 			<div class="categor">
 				<h3>ВЫБЕРИТЕ КАТЕГОРИЮ:</h3>
-				<div class="categor-list clearfix">
+				<div class="categor-list clearfix" id="b-categories">
 					<ul>
-						<li><a href="#">Автомобили</a></li>
-						<li><a href="#">Грузоперевозки</a></li>
-						<li><a href="#">Для дома</a></li>
-						<li><a href="#">Компьютеры</a></li>
-						<li><a href="#">Маркетинг и реклама</a></li>
-						<li><a href="#">Недвижимость</a></li>
-						<li><a href="#">Оптовые продажи</a></li>
-						<li><a href="#">Подарки</a></li>
-						<li><a href="#">Праздники</a></li>
-						<li><a href="#">Продукты питания</a></li>
-						<li><a href="#">Ремонт квартир</a></li>
-						<li class="active"><a href="#">Нет моей ниши</a></li>
+						<li class="active" data-cat="c-all"><a href="#">Все категории</a></li>
+						<li data-cat="c-1"><a href="#">Автомобили</a></li>
+						<li data-cat="c-2"><a href="#">Грузоперевозки</a></li>
+						<li data-cat="c-3"><a href="#">Для дома</a></li>
+						<li data-cat="c-4"><a href="#">Компьютеры</a></li>
+						<li data-cat="c-5"><a href="#">Маркетинг и реклама</a></li>
+						<li data-cat="c-6"><a href="#">Недвижимость</a></li>
+						<!-- <li data-cat="c-7"><a href="#">Оптовые продажи</a></li> -->
+						<!-- <li data-cat="c-8"><a href="#">Праздники</a></li> -->
+						<li data-cat="c-9"><a href="#">Продукты питания</a></li>
+						<li data-cat="c-10"><a href="#">Ремонт квартир</a></li>
+						<li class="more fancy" data-block="#b-popup-detail"><a href="#">Нет моей ниши</a></li>
 					</ul>
 				</div>
 			</div>
-			<div class="categor-example clearfix">
-				<ul>
-					<li>
+			<div class="categor-example clearfix" >
+				<ul class="clearfix" id="b-catalog-list">
+					<li class="c-all c-6">
 						<div class="example-page ep1">
 							<div class="page-head white">
 								<a href="#"><h3 class="white">АРЕНДА КВАРТИР</h3></a>
@@ -503,10 +503,10 @@
 							</div>
 						</div>
 					</li>
-					<li>
+					<li class="c-all c-3 c-10">
 						<div class="example-page ep2">
 							<div class="page-head white">
-								<a href="#"><h3 class="white">НАТАЯЖНЫЕ ПОТОЛКИ</h3></a>
+								<a href="#"><h3 class="white">НАТЯЖНЫЕ ПОТОЛКИ</h3></a>
 							</div>
 							<div class="page-price black clearfix">
 								<p>
@@ -538,7 +538,7 @@
 							</div>
 						</div>
 					</li>
-					<li>
+					<li class="c-all c-9">
 						<div class="example-page ep3">
 							<div class="page-head white">
 								<a href="#"><h3 class="white">ПРОДАЖА МЯСА</h3></a>
@@ -573,7 +573,7 @@
 							</div>
 						</div>
 					</li>
-					<li>
+					<li class="c-all c-4">
 						<div class="example-page ep4">
 							<div class="page-head white">
 								<a href="#"><h3 class="white">РЕМОНТ НОУТБУКОВ</h3></a>
@@ -608,7 +608,7 @@
 							</div>
 						</div>
 					</li>
-					<li>
+					<li class="c-all c-10">
 						<div class="example-page ep5">
 							<div class="page-head white">
 								<a href="#"><h3 class="white">ЭЛЕКТРОМОНТАЖНЫЕ РАБОТЫ</h3></a>
@@ -643,7 +643,7 @@
 							</div>
 						</div>
 					</li>
-					<li>
+					<li class="c-all c-1">
 						<div class="example-page ep6">
 							<div class="page-head white">
 								<a href="#"><h3 class="white">ПРОКАТ АВТОМОБИЛЕЙ</h3></a>
@@ -678,7 +678,7 @@
 							</div>
 						</div>
 					</li>
-					<li>
+					<li class="c-all c-3 c-10">
 						<div class="example-page ep7">
 							<div class="page-head white">
 								<a href="#"><h3 class="white">ПРОДАЖА КОНДИЦИОНЕРОВ</h3></a>
@@ -713,7 +713,7 @@
 							</div>
 						</div>
 					</li>
-					<li>
+					<li class="c-all c-2">
 						<div class="example-page ep8">
 							<div class="page-head white">
 								<a href="#"><h3 class="white">ГРУЗОВЫЕ МЕЖДУНАРОДНЫЕ ПЕРЕВОЗКИ</h3></a>
@@ -748,7 +748,7 @@
 							</div>
 						</div>
 					</li>
-					<li>
+					<li class="c-all c-5">
 						<div class="example-page ep9">
 							<div class="page-head white">
 								<a href="#"><h3 class="white">НАСТРОЙКА ЯНДЕКС ДИРЕКТ И GOOGLE ADWORDS</h3></a>
@@ -786,7 +786,7 @@
 				</ul>
 			</div>
 			<div class="show_more">
-				<a href="#">ПОКАЗАТЬ БОЛЬШЕ</a>
+				<!-- <a href="#">ПОКАЗАТЬ БОЛЬШЕ</a> -->
 			</div>
 		</div>
 	</div>

@@ -80,4 +80,17 @@ $(document).ready(function(){
         active: 0,
          show: { effect: "fadeIn", duration: 400 }
     });
+
+    $("#b-categories li").click(function(){
+        if( !$(this).hasClass("more") ) {
+            var cat = $(this).attr("data-cat");
+
+            $("#b-categories li.active").removeClass("active");
+            $(this).addClass("active");
+
+            $("#b-catalog-list>li").hide();
+            $("#b-catalog-list>li."+cat).fadeIn(300);
+        }
+        return false;
+    });
 });

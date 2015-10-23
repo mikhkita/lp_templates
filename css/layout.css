@@ -168,6 +168,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .b-3 {
 	background-color: #6a7f8e;
+	text-align: center;
 }
 	.b-h2 {
 		font-family: 'robotomedium';
@@ -179,6 +180,7 @@ h1,h2,h3,h4,h5,h6 {
 	.b3-list {
 		margin-top: 20px;
 		text-align: center;
+		display: inline-block;
 	}
 		.b3-list li.three {
 			margin: 0px;
@@ -341,6 +343,7 @@ h1,h2,h3,h4,h5,h6 {
 .b-6 {
 	background-color: #3d4b5a;
 	margin-top: 110px;
+	text-align: center;
 }
 	.b6-list-p p {
 		width: 190px;
@@ -375,20 +378,23 @@ h1,h2,h3,h4,h5,h6 {
 	float: left;
 }
 .categor-list li {
-	width: 24%;
+	width: 255px;
 	float: left;
-	margin-right: 1%;
+	margin-right: 10px;
 }
-	.categor-list .active a {
+.categor-list li:nth-child(4n){
+	margin-right: 0;
+}
+	.categor-list .more a {
 		background-color: #fff;
 		color: #000;
 		border: 1px solid #00c997;
 		margin-right: 0px;
 	}
-		.categor-list .active a:hover {
+		/*.categor-list .active a:hover {
 			background-color: #fff;
 			color: #000;
-		}
+		}*/
 	.categor-list a {
 		font-family: 'robotolight';
 		padding: 5px 30px;
@@ -399,15 +405,23 @@ h1,h2,h3,h4,h5,h6 {
 		margin-bottom: 5px;
 		text-align: center;
 	}
-	.categor-list a:hover {
+	.categor-list a:hover,
+	.categor-list .active a {
 		background-color: #00c997;
 	}
-
+.categor-example li{
+	float: left;
+}	
+.categor-example li:nth-child(3n)>div{
+	margin-right: 0px;
+}
 .example-page {
 	margin-right: 30px;
 	margin-top: 30px;
 	border: 1px solid #d0d0d0;
 	border-radius: 5px;
+	width: 328px;
+	background-size: 328px !important;
 }
 	.ep1 {
 		background: url(../images/b7_fon1.jpg) no-repeat;
@@ -454,7 +468,8 @@ h1,h2,h3,h4,h5,h6 {
 		display: block;
 		padding: 5px 10px;
 		text-align: center;
-		width: 293px;
+		width: 309px;
+		border-radius: 4px 4px 0px 0px;
 		height: 50px;
 		display: table-cell;
 		vertical-align: middle;
@@ -484,10 +499,13 @@ h1,h2,h3,h4,h5,h6 {
 		background: rgba(154,168,178,0.85);
 		padding: 12px 10px;
 	}
+	.page-button li{
+		float: none !important;
+	}
 		.page-button a {
 			font-family: 'robotoregular';
 			display: block;
-			padding: 5px 30px;
+			padding: 5px 34px;
 			text-align: center;
 			border-radius: 3px;
 		}
