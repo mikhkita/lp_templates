@@ -96,6 +96,14 @@ $(document).ready(function(){
     customHandlers["popup"] = function(el){
         $(".b-popup h2").text(el.parents(".example-page").find(".buy").attr("data-value"));
         $(".b-buy-butt").attr("data-value",el.parents(".example-page").find(".buy").attr("data-value")).attr("data-name","Шаблон");
+
+        var $cont = el.parents(".example-page");
+
+        $(".b-popup").find(".b-asd").prop('checked', false);
+
+        $cont.find("input:checked").each(function(){
+            $(".b-popup").find("#"+$(this).attr("data-id")).prop('checked', true);
+        });
     };
 
     customHandlers["popup-buy"] = function(el){
@@ -103,6 +111,19 @@ $(document).ready(function(){
             string = [];
 
         $cont.find("input:checked").each(function(){
+            string.push($(this).val());
+        });
+
+        $(".b-kit-input").val(string.join(", "));
+    };
+
+    customHandlers["popup-buy-1"] = function(el){
+        var $cont = el.parents("form"),
+            string = [];
+
+            alert();
+
+        $cont.find(".b-asd:checked").each(function(){
             string.push($(this).val());
         });
 
