@@ -80,7 +80,7 @@ h1,h2,h3,h4,h5,h6 {
 .black {
 	color: #000;
 }
-.fancybox-close {
+.popup-close {
 	background-image: url("../images/popup-close.png");
 	width: 31px;
 	height: 32px;
@@ -246,14 +246,16 @@ h1,h2,h3,h4,h5,h6 {
 .b-4 {
 	background: url(../images/fon_b4.jpg);
 	background-position: center;
+	text-align: center;
 }
-	.b4-bg {
-		padding: 60px 0px;
+	.b-4 .b-block {
+		padding: 68px 0px 26px;
 	}
 		.b4-content {
 			background: url(../images/fon_b4-content.jpg) no-repeat;
 			background-position: center;
 			padding: 10px 40px;
+			text-align: left;
 		}
 			.b4-content li {
 				vertical-align: middle;
@@ -270,6 +272,30 @@ h1,h2,h3,h4,h5,h6 {
 				padding: 5px 40px;
 				border-radius: 3px;
 			}
+	.b-4 .slick-dots {
+		font-size: 0;
+		margin-top: 30px;
+	}
+		.b-4 .slick-dots li{
+			display: inline-block;
+			margin-right: 10px;
+			cursor: pointer;
+		}
+		.b-4 .slick-dots li:last-child {
+			margin-right: 0;
+		}
+			.b-4 .slick-dots li button {
+				font-size: 0;
+				border: none;
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				background-color: #fff;
+				cursor: pointer;
+			}
+		.b-4 .slick-dots li.slick-active button{
+			background-color: #00c997;
+		}
 
 
 .tabs-menu	{
@@ -324,6 +350,9 @@ h1,h2,h3,h4,h5,h6 {
 					text-align: left;
 					padding: 50px 0px 20px 0px;
 					border-bottom: 1px solid #b5bfc7;
+				}
+				.b-h2.white.bb {
+					text-transform: uppercase;
 				}
 				.tabs-p {
 					font-family: 'robotoregular';
@@ -842,8 +871,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 	.b-popup > .left {
 		width: 498px;
-		padding: 63px 13px 0px 21px;
+		padding: 25px 13px 0px 21px;
 		box-sizing: border-box;
+		text-align: center;
 	}
 		.b-popup > .left h2 {
 			font-size: 37px;
@@ -854,8 +884,9 @@ h1,h2,h3,h4,h5,h6 {
 			text-align: center;
 		}
 		.b-popup > .left img{
-			width: 100%;
-			margin: 32px 0 43px;
+			max-width: 100%;
+			margin: 32px 0 33px;
+			max-height: 300px;
 		}
 		.b-popup > .left a {
 			width: 100%;
@@ -989,7 +1020,7 @@ padding-left: 4px;
 				font-size: 36px;
 				font-family: "robotobold";
 				color: rgb(255, 255, 255);
-				margin-left: 47px;
+				margin-left: 30px;
 				margin-top: 4px;
 			}
 			.b-popup > .right .popup-price input {
@@ -999,7 +1030,6 @@ padding-left: 4px;
 				border-radius: 5px;
 				width: 185px;
 				border: none;
-				margin-left: 31px;
 				text-transform: uppercase;
 				padding: 5px 0;
 				background-color: #00c997;
@@ -1059,4 +1089,11 @@ input.error,textarea.error{
 		display: inline-block;
 		background-color: #049873;
     	border: 2px solid #049873;
+	}
+.b-popup-text {
+	width: 600px;
+}
+	.b-popup-text p {
+		text-align:left;
+		margin-bottom:20px;
 	}

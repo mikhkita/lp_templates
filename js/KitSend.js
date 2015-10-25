@@ -6,6 +6,54 @@ function getNextField($form){
 	return j;
 }
 
+function getInternetExplorerVersion()
+{
+    var rv = -1;
+    if (navigator.appName == 'Microsoft Internet Explorer')
+    {
+        var ua = navigator.userAgent;
+        var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+        if (re.exec(ua) != null)
+            rv = parseFloat( RegExp.$1 );
+    }
+    else if (navigator.appName == 'Netscape')
+    {
+        var ua = navigator.userAgent;
+        var re  = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
+        if (re.exec(ua) != null)
+            rv = parseFloat( RegExp.$1 );
+    }
+    return rv;
+}
+
+function fancyOpen(el){
+	var ie='\v'=='v';
+    $.fancybox(el,{
+        scrolling: 'no',
+        afterShow: function(){
+        	setTimeout(function(){
+        		$.fancybox.update();
+        	},300);
+        },
+        onUpdate:function(){
+        	$('.fancybox-wrap').css({
+                'position':'absolute'
+            });
+            // setTimeout(function(){
+                if( getInternetExplorerVersion() !== -1 ) 
+                	$('.fancybox-wrap').css({
+	                    'top':'0'
+	                });
+                $('.fancybox-inner').css('height','auto');
+            // },200);
+        },
+        padding:0
+    }); 
+    $('html').addClass('fancybox-lock'); 
+    $('.fancybox-overlay').html($('.fancybox-wrap')); 
+    return false;
+}
+
 var customHandlers = [];
 
 $(document).ready(function(){	
@@ -43,6 +91,10 @@ $(document).ready(function(){
 		$this.fancybox({
 			padding : 0,
 			content : $popup,
+			fitToView: false,
+			tpl: {
+				closeBtn : '<a title="Закрыть" class="fancybox-item fancybox-close popup-close" href="javascript:;"></a>'
+			},
 			helpers: {
 	         	overlay: {
 	            	locked: true 
@@ -86,7 +138,9 @@ $(document).ready(function(){
 	});
 
 	$(".fancy-img").fancybox({
-		padding : 0
+		padding : 0,
+		fitToView: false,
+		maxWidth: 1000
 	});
 
 	$(".ajax").parents("form").submit(function(){

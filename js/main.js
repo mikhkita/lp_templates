@@ -95,6 +95,8 @@ $(document).ready(function(){
 
     customHandlers["popup"] = function(el){
         $(".b-popup h2").text(el.parents(".example-page").find(".buy").attr("data-value"));
+        $(".b-popup .maket-thumb").attr("src","images/"+el.parents(".example-page").find(".buy").attr("data-img")+"-thumb.jpg");
+        $("#maket").attr("src","images/"+el.parents(".example-page").find(".buy").attr("data-img")+".jpg");
         $(".b-buy-butt").attr("data-value",el.parents(".example-page").find(".buy").attr("data-value")).attr("data-name","Шаблон");
 
         var $cont = el.parents(".example-page");
@@ -104,6 +106,8 @@ $(document).ready(function(){
         $cont.find("input:checked").each(function(){
             $(".b-popup").find("#"+$(this).attr("data-id")).prop('checked', true);
         });
+        $(".b-popup").find(".template-price").text($cont.find(".template-price").text());
+
     };
 
     customHandlers["popup-buy"] = function(el){
@@ -115,24 +119,45 @@ $(document).ready(function(){
         });
 
         $(".b-kit-input").val(string.join(", "));
+        $(".b-price-input").val($cont.find(".template-price").text());
     };
 
     customHandlers["popup-buy-1"] = function(el){
         var $cont = el.parents("form"),
             string = [];
 
-            alert();
-
         $cont.find(".b-asd:checked").each(function(){
             string.push($(this).val());
         });
 
         $(".b-kit-input").val(string.join(", "));
+        $(".b-price-input").val($cont.find(".template-price").text());
     };
 
     $(".category-checkbox").change(function(){
         if($(this).parent().hasClass("active")) {
             $(this).parent().removeClass("active");
         } else $(this).parent().addClass("active");
+    });
+
+
+    $(".category-checkbox").change(function(){
+        var $price = $(this).parent().parent().find(".template-price");
+        if($(this).prop( "checked" )) {
+            $price.text( ($price.text()*1)+($(this).attr("data-price")*1) ); 
+        } else $price.text( ($price.text()*1)-($(this).attr("data-price")*1) ); 
+    });
+    $(".b-asd").change(function() {
+        var $price = $(this).closest("form").find(".template-price");
+        if($(this).prop( "checked" )) {
+            $price.text( ($price.text()*1)+($(this).attr("data-price")*1) ); 
+        } else $price.text( ($price.text()*1)-($(this).attr("data-price")*1) );
+    });
+
+    $(".b-4 .b-block").slick({
+        autoplay: true,
+        dots: true,
+        arrows: false,
+        fade: true
     });
 });
