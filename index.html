@@ -249,7 +249,7 @@
 					</li>
 				</ul>
 				<div class="tabs-content" id="b5-tabs-1">
-			  		<ul>
+			  		<ul class="clearfix">
 			  			<li class="li-text">
 					  		<div class="b-h2 white bb">
 					  			<h2>ЛЕНДИНГ ПЕЙДЖ С УДОБНОЙ АДМИНКОЙ + ОБУЧАЮЩЕЕ ВИДЕО</h2>
@@ -261,14 +261,14 @@
 			  			<li>
 			  				<div class="content-video">
 			  					<a href="#">
-			  						<img src="images/video.jpg">
+			  						<img style="margin-top:65px;" src="images/video.jpg">
 			  					</a>
 			  				</div>
 			  			</li>
 			  		</ul>		
 				</div>
 				<div class="tabs-content" id="b5-tabs-2">
-			  		<ul>
+			  		<ul class="clearfix">
 			  			<li class="li-text">
 					  		<div class="b-h2 white bb">
 					  			<h2>Список ключевиков для Я.Директа + видео по настройке</h2>
@@ -280,14 +280,14 @@
 			  			<li>
 			  				<div class="content-video">
 			  					<a href="#">
-			  						<img src="images/video.jpg">
+			  						<img style="margin-top:80px;" src="images/tab-key.jpg">
 			  					</a>
 			  				</div>
 			  			</li>
 			  		</ul>		
 				</div>
 				<div class="tabs-content" id="b5-tabs-3">
-			  		<ul>
+			  		<ul class="clearfix">
 			  			<li class="li-text">
 					  		<div class="b-h2 white bb">
 					  			<h2>Скрипты отдела продаж: обработка входящих/исходящих звонков</h2>
@@ -299,14 +299,14 @@
 			  			<li>
 			  				<div class="content-video">
 			  					<a href="#">
-			  						<img src="images/video.jpg">
+			  						<img style="margin-top:100px;" src="images/tab-script.jpg">
 			  					</a>
 			  				</div>
 			  			</li>
 			  		</ul>		
 				</div>
 				<div class="tabs-content" id="b5-tabs-4">
-			  		<ul>
+			  		<ul class="clearfix">
 			  			<li class="li-text">
 					  		<div class="b-h2 white bb">
 					  			<h2>ЛЕНДИНГ ПЕЙДЖ С УДОБНОЙ АДМИНКОЙ + ОБУЧАЮЩЕЕ ВИДЕО4</h2>
@@ -320,7 +320,7 @@
 			  			<li>
 			  				<div class="content-video">
 			  					<a href="#">
-			  						<img src="images/video.jpg">
+			  						<img src="images/tab-kit.jpg">
 			  					</a>
 			  				</div>
 			  			</li>
@@ -839,21 +839,26 @@
 				<h2 class="b8-head white">
 					Специальное предложение скачать весь комплект:
 				</h2>
-				<div class="b8-sentence clearfix">
-					<ul>
+				<div class="b8-sentence example-page clearfix">
+					<ul class="clearfix" style="display:inline-block;">
 						<li>
 							<p>
 								Лендинг пейдж
 								<br>
 								Обучающее видео
 							</p>
-							<p>
-								<div class="green-check"></div>Список ключевиков
-								<br>
-								<div class="green-check"></div>Скрипт продаж
-								<br>
-								<div class="white-check"></div>Маркетинг кит
-							</p>
+							<label class="active">
+								Список ключевиков
+								<input data-price="10" data-check="key" class="category-checkbox1" type="checkbox" name="pack[]" value="Список ключевиков" checked>
+							</label>
+							<label class="active">
+								Скрипт продаж
+								<input data-price="10" data-check="script" class="category-checkbox1" type="checkbox" name="pack[]" value="Скрипт продаж" checked>
+							</label>
+							<label class="active">
+								Маркетинг кит
+								<input data-price="10" data-check="kit" class="category-checkbox1" type="checkbox" name="pack[]" value="Маркетинг кит" checked>
+							</label>
 						</li>
 						<li>
 							<p>
@@ -873,11 +878,11 @@
 							<p>
 								ЦЕНА:
 								<br>
-								<span class="sixty">60 000 руб</span>
+								<span class="sixty"><span class="full-price">60</span> 000 руб</span>
 								<br>
-								<span class="fifteen">14 999 руб</span>
+								<span class="fifteen"><span class="template-price">14</span> 999 руб</span>
 							</p>
-							<a href="#">КУПИТЬ</a>
+							<a href="#" class="fancy" data-block="#b-popup-1" data-value="Купить весь комплект" data-beforeShow="popup-buy" data-name="Шаблон">КУПИТЬ</a>
 						</li>
 					</ul>
 				</div>
@@ -942,84 +947,42 @@
 			<div class="b-h2 black">
 				<h2>СПИСОК ЧАСТО ЗАДАВАЕМЫХ ВОПРОСОВ:</h2>
 			</div>
-			<div class="b10-content">
-				<div class="question clearfix">
-					<div class="name-question clearfix">
-						<div class="number-question">1</div>КАК <span>РЕДАКТИРУЮТСЯ</span> ШАБЛОНЫ?
-					</div>
-					<div class="answer">
-						<p></p>
-					</div>
+			<div class="b10-content" id="accordion">
+				<h3 class="question"><span class="number-question">1</span> КАК <span>РЕДАКТИРУЮТСЯ</span> ШАБЛОНЫ?</h3>
+				<div class="answer">
+					Нет. Вы платите один раз, и пользуетесь постоянно. Никаких больше оплат не нужно.
 				</div>
-				<div class="question">
-					<div class="name-question">
-						<div class="number-question">2</div>НУЖНО ЛИ <span>ПЛАТИТЬ</span> ЗА ШАБЛОНЫ <span>ЕЖЕМЕСЕЧНО?</span>
-					</div>
-					<div class="answer">
-						<p>
-							Нет. Вы платите один раз, и пользуетесь постоянно. Никаких больше оплат не нужно.
-						</p>
-					</div>
+				<h3 class="question"><span class="number-question">2</span> НУЖНО ЛИ <span>платить</span> за ШАБЛОНЫ <span>ЕЖЕМЕСяЧНО</span>?</h3>
+				<div class="answer">
+					НЕТ. Вы ПЛАТИТЕ ОДИН РАЗ, И ПОЛЬЗУЕТЕСЬ ПОСТОЯННО. НИКАКИХ БОЛЬШЕ ОПЛАТ НЕ НУЖНО.
 				</div>
-				<div class="question">
-					<div class="name-question">
-						<div class="number-question">3</div>НУЖЕН ЛИ СВОЙ <span>ДОМЕН И ХОСТИНГ?</span>
-					</div>
-					<div class="answer">
-						<p></p>
-					</div>
+				<h3 class="question"><span class="number-question">3</span> НУЖЕН ЛИ СВОЙ <span>ДОМЕН И ХОСТИНГ?</span></h3>
+				<div class="answer">
+					НЕТ. Вы ПЛАТИТЕ ОДИН РАЗ, И ПОЛЬЗУЕТЕСЬ ПОСТОЯННО. НИКАКИХ БОЛЬШЕ ОПЛАТ НЕ НУЖНО.
 				</div>
-				<div class="question">
-					<div class="name-question">
-						<div class="number-question">4</div><span>СКОЛЬКО САЙТОВ</span> Я СМОГУ СДЕЛАТЬ ИСПОЛЬЗУЯ ШАБЛОНЫ?
-					</div>
-					<div class="answer">
-						<p></p>
-					</div>
+				<h3 class="question"><span class="number-question">4</span> <span>СКОЛЬКО САЙТОВ</span> Я СМОГУ СДЕЛАТЬ ИСПОЛЬЗУЯ ШАБЛОНЫ?</h3>
+				<div class="answer">
+					НЕТ. Вы ПЛАТИТЕ ОДИН РАЗ, И ПОЛЬЗУЕТЕСЬ ПОСТОЯННО. НИКАКИХ БОЛЬШЕ ОПЛАТ НЕ НУЖНО.
 				</div>
-				<div class="question">
-					<div class="name-question">
-						<div class="number-question">5</div><span>КАК ЗАПУСТИТЬ РЕКЛАМУ</span> НА СДЕЛАННЫЙ МНОЮ САЙТ?
-					</div>
-					<div class="answer">
-						<p></p>
-					</div>
+				<h3 class="question"><span class="number-question">5</span> <span>КАК ЗАПУСТИТЬ РЕКЛАМУ</span> НА СДЕЛАННЫЙ МНОЮ САЙТ?</h3>
+				<div class="answer">
+					НЕТ. Вы ПЛАТИТЕ ОДИН РАЗ, И ПОЛЬЗУЕТЕСЬ ПОСТОЯННО. НИКАКИХ БОЛЬШЕ ОПЛАТ НЕ НУЖНО.
 				</div>
-				<div class="question">
-					<div class="name-question">
-						<div class="number-question">6</div>ЕСЛИ У МЕНЯ ВДРУГ ВОЗНИКНУТ <span>ТРУДНОСТИ В РЕДАКТИРОВАНИИ,</span> ВЫ МНЕ ПОМОЖЕТЕ?
-					</div>
-					<div class="answer">
-						<p></p>
-					</div>
+				<h3 class="question"><span class="number-question">6</span> ЕСЛИ У МЕНЯ ВДРУГ ВОЗНИКНУТ <span>ТРУДНОСТИ В РЕДАКТИРОВАНИИ,</span> ВЫ МНЕ ПОМОЖЕТЕ?</h3>
+				<div class="answer">
+					НЕТ. Вы ПЛАТИТЕ ОДИН РАЗ, И ПОЛЬЗУЕТЕСЬ ПОСТОЯННО. НИКАКИХ БОЛЬШЕ ОПЛАТ НЕ НУЖНО.
 				</div>
-				<div class="question">
-					<div class="name-question">
-						<div class="number-question">7</div><span>КОГДА</span> ПОСЛЕ ПОКУПКИ <span>Я ПОЛУЧУ ШАБЛОНЫ?</span>
-					</div>
-					<div class="answer">
-						<p>
-							Сразу после оплаты Вас автоматически перенаправит на страницу скачивания.
-							<br>
-							А так же в течении 5 минут после оплаты, ссылка на страницу скачивания придет на указанный Вами e-mail.
-						</p>
-					</div>
+				<h3 class="question"><span class="number-question">7</span> КОГДА ПОСЛЕ ПОКУПКИ <span>Я ПОЛУЧУ ШАБЛОНЫ?</span></h3>
+				<div class="answer">
+					Сразу после оплаты Вас автоматически перенаправит на страницу скачивания.<br>А так же в течении 5 минут после оплаты, ссылка на страницу скачивания придет на указанный Вами e-mail.
 				</div>
-				<div class="question">
-					<div class="name-question">
-						<div class="number-question">8</div>Я ХОЧУ ПРИОБРЕСТИ ЭТОТ НАБОР, <span>КАКИМ СПОСОБОМ Я МОГУ ОПЛАТИТЬ</span> ШАБЛОНЫ LANDING PAGE?
-					</div>
-					<div class="answer">
-						<p></p>
-					</div>
+				<h3 class="question"><span class="number-question">8</span> Я ХОЧУ ПРИОБРЕСТИ ЭТОТ НАБОР, <span>КАКИМ СПОСОБОМ Я МОГУ ОПЛАТИТЬ</span> ШАБЛОНЫ LANDING PAGE?</h3>
+				<div class="answer">
+					НЕТ. Вы ПЛАТИТЕ ОДИН РАЗ, И ПОЛЬЗУЕТЕСЬ ПОСТОЯННО. НИКАКИХ БОЛЬШЕ ОПЛАТ НЕ НУЖНО.
 				</div>
-				<div class="question">
-					<div class="name-question">
-						<div class="number-question">9</div>НА ВОРДПРЕС (ДЖУМЛУ ИЛИ КАКОЙ-ЛИБО ДРУГОЙ <span>ДВИЖОК</span> ИХ МОЖНО ПОСТАВИТЬ?
-					</div>
-					<div class="answer">
-						<p></p>
-					</div>
+				<h3 class="question"><span class="number-question">9</span> НА ВОРДПРЕС (ДЖУМЛУ ИЛИ КАКОЙ-ЛИБО ДРУГОЙ <span>ДВИЖОК</span> ИХ МОЖНО ПОСТАВИТЬ?</h3>
+				<div class="answer">
+					НЕТ. Вы ПЛАТИТЕ ОДИН РАЗ, И ПОЛЬЗУЕТЕСЬ ПОСТОЯННО. НИКАКИХ БОЛЬШЕ ОПЛАТ НЕ НУЖНО.
 				</div>
 			</div>
 		</div>

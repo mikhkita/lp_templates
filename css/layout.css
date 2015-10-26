@@ -312,7 +312,7 @@ h1,h2,h3,h4,h5,h6 {
 			vertical-align: middle;
 			border-bottom: 4px solid #fff;
 			background-color: #00c997;
-			padding: 0 40px;
+			
 		}
 			.tabs-menu li:last-child {
 				border-right: none;
@@ -323,6 +323,7 @@ h1,h2,h3,h4,h5,h6 {
 					color: #fff;
 					text-align: center;
 					background-color: #00c997;
+					padding: 0 40px;
 				}
 				.ui-state-default:hover,.ui-state-default:hover a, .ui-tabs-active a,.ui-tabs-active{
 					background-color: #3d4b5a !important;
@@ -339,7 +340,17 @@ h1,h2,h3,h4,h5,h6 {
 		padding-top: 4px;
 	}
 		.tabs-content li {
-			width: 40%;
+			float: left;
+			box-sizing: border-box;
+			display: block;
+		}
+		.tabs-content li:nth-child(1) {
+			width: 545px;
+			
+		}
+		.tabs-content li:nth-child(2) {
+			width: 505px;
+			
 		}
 			.tabs-content .li-text {
 				padding:  0px 63px;
@@ -364,7 +375,7 @@ h1,h2,h3,h4,h5,h6 {
 					vertical-align: middle;
 				}
 					.content-video img {
-						width: 119%;
+						
 					}
 
 .b-6 {
@@ -442,7 +453,7 @@ h1,h2,h3,h4,h5,h6 {
 .categor-example li:nth-child(3n)>div{
 	margin-right: 0px;
 }
-.example-page {
+.categor-example .example-page {
 	margin-right: 30px;
 	margin-top: 30px;
 	border: 1px solid #d0d0d0;
@@ -626,12 +637,41 @@ h1,h2,h3,h4,h5,h6 {
 			text-align: center;
 			color: #fff;
 		}
+		.b8-sentence label {
+			font-size: 16px;
+			font-family: "robotolight";
+			color: #fff;
+			line-height: 1.375;
+			position: relative;
+			display: block;
+			padding-left: 24px;
+			cursor: pointer;
+		}
+			.b8-sentence label:before {
+				position: absolute;
+				font-size: 0;
+				content: "";
+				width: 12px;
+				height: 12px;
+				background: none;
+				border: 2px solid #fff;
+				left: 0px;
+				top: 3px;
+				border-radius: 5px;
+			}
+			.b8-sentence label.active:before {
+				background-color: #00eab5;
+			}
+			.b8-sentence label input {
+				display: none;
+			}
 		.b8-sentence ul li {
+			float: left;
 			margin-right: 80px;
 		}
 		.b8-sentence ul li:first-child {
 			text-align: left;
-			width: 170px;
+			width: 180px;
 		}
 		.b8-sentence ul li:last-child {
 			margin-right: 0px;
@@ -720,38 +760,50 @@ h1,h2,h3,h4,h5,h6 {
 
 .b10-content {
 	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-bottom: 80px;
 }
-	.question {
+	.b10-content .question {
 		font-family: 'robotolight';
-		border: 1px solid #a3a3a3;
-		border-radius: 3px;
-		margin-bottom: 35px;
 		font-size: 24px;
+		text-transform: uppercase;
+		cursor: pointer;
+		position: relative;
+		top: 20px;
+		left: 12px;
+		background-color: #fff;
+		padding: 0 10px;
+		
 	}
-		.name-question {
+	.b10-content .ui-corner-all {
+		display: block;
+		margin-bottom: 35px;
+	}
+	.b10-content .ui-accordion-header-active {
+		display: inline-block !important; 
+		margin-bottom: 0 !important;
+	}
+		.b10-content .question .number-question {
 			padding: 0px 10px;
-			background-color: #fff;
-			margin-top: -13px;
-			margin-left: 10px;
+			background-color: #00a77c;
+			margin-right: 10px;
+			color: #fff;
+			border-radius: 3px;
 			float: left;
 		}
-			.number-question {
-				padding: 0px 10px;
-				background-color: #00a77c;
-				margin-right: 10px;
-				color: #fff;
-				border-radius: 3px;
-				float: left;
-			}
-			.name-question span {
-				color: #00a77c;
-			}
-		.answer p {
-			padding: 32px;
-			font-size: 16px;
+		.b10-content .question span {
+			color: #00a77c;
 		}
-
+		.b10-content .answer {
+			border: 1px solid #a3a3a3;
+			border-radius: 3px;
+			margin-bottom: 35px;
+			font-size: 16px;
+			padding: 42px 32px 32px;
+			font-family: 'robotolight';
+		}
+		.b10-content .ui-state-default:hover {
+    		background-color: #fff !important;
+		}
 .b-11 {
 	background: url(../images/b11_fon.jpg) no-repeat;
 	background-position: center;

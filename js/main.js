@@ -119,7 +119,9 @@ $(document).ready(function(){
         });
 
         $(".b-kit-input").val(string.join(", "));
-        $(".b-price-input").val($cont.find(".template-price").text());
+        if($cont.hasClass("b8-sentence")) {
+           $(".b-price-input").val($cont.find(".template-price").text()+"999"); 
+        } else $(".b-price-input").val($cont.find(".template-price").text()+"000");
     };
 
     customHandlers["popup-buy-1"] = function(el){
@@ -134,7 +136,7 @@ $(document).ready(function(){
         $(".b-price-input").val($cont.find(".template-price").text());
     };
 
-    $(".category-checkbox").change(function(){
+    $(".category-checkbox,.category-checkbox1").change(function(){
         if($(this).parent().hasClass("active")) {
             $(this).parent().removeClass("active");
         } else $(this).parent().addClass("active");
@@ -142,11 +144,30 @@ $(document).ready(function(){
 
 
     $(".category-checkbox").change(function(){
-        var $price = $(this).parent().parent().find(".template-price");
+        var $price = $(this).closest('.example-page').find(".template-price");
         if($(this).prop( "checked" )) {
             $price.text( ($price.text()*1)+($(this).attr("data-price")*1) ); 
         } else $price.text( ($price.text()*1)-($(this).attr("data-price")*1) ); 
     });
+
+    $(".category-checkbox1").change(function(){
+        var $full_price = $(this).closest('.example-page').find(".full-price");
+        var $action_price = $(this).closest('.example-page').find(".template-price");
+        if($(this).prop( "checked" )) {
+            $full_price.text( ($full_price.text()*1)+($(this).attr("data-price")*1) ); 
+        } else {
+            $full_price.text( ($full_price.text()*1)-($(this).attr("data-price")*1) ); 
+        }
+        if($("input[data-check='kit']").prop("checked") && $("input[data-check='script']").prop("checked") && $("input[data-check='key']").prop("checked")) {$action_price.text(14); return false;}
+        if( !$("input[data-check='kit']").prop("checked") && !$("input[data-check='script']").prop("checked") && !$("input[data-check='key']").prop("checked") ) {$action_price.text(9); return false;}
+        if($("input[data-check='key']").prop("checked")) { $action_price.text(11); return false;}
+        if($("input[data-check='key']").prop("checked") && $("input[data-check='script']").prop("checked") ) { $action_price.text(13); return false;}
+        if($("input[data-check='kit']").prop("checked") && $("input[data-check='key']").prop("checked")) { $action_price.text(10); return false;}
+        if($("input[data-check='kit']").prop("checked") && $("input[data-check='script']").prop("checked")) { $action_price.text(12); return false;}
+        if($("input[data-check='kit']").prop("checked")) { $action_price.text(10); return false;}
+        if($("input[data-check='script']").prop("checked")) { $action_price.text(11); return false;}
+    });
+
     $(".b-asd").change(function() {
         var $price = $(this).closest("form").find(".template-price");
         if($(this).prop( "checked" )) {
@@ -160,4 +181,12 @@ $(document).ready(function(){
         arrows: false,
         fade: true
     });
+
+    $( "#accordion" ).accordion({
+      collapsible: true,
+      heightStyle:'content',
+      active: false
+    });
+
+
 });
