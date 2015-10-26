@@ -500,7 +500,7 @@
 										<a href="#" class="fancy watch white" data-block="#b-popup-detail" data-beforeShow="popup">ПРОСМОТР</a>
 									</li>
 									<li>
-										<a href="#" class="buy white fancy" data-block='#b-popup-1' data-img="arenda" data-value="Аренда квартир" data-beforeShow="popup-buy" data-name="Шаблон">КУПИТЬ</a>
+										<a href="#" class="buy white fancy" data-block='#b-popup-1' data-template="arenda_kvartir_template" data-img="arenda" data-value="Аренда квартир" data-beforeShow="popup-buy" data-name="Шаблон">КУПИТЬ</a>
 									</li>
 								</ul>
 							</div>
@@ -882,7 +882,7 @@
 								<br>
 								<span class="fifteen"><span class="template-price">14</span> 999 руб</span>
 							</p>
-							<a href="#" class="fancy" data-block="#b-popup-1" data-value="Купить весь комплект" data-beforeShow="popup-buy" data-name="Шаблон">КУПИТЬ</a>
+							<a href="#" class="fancy" data-block="#b-popup-1" data-template="all_templates" data-value="Полный комплект" data-beforeShow="popup-buy" data-name="Шаблон">КУПИТЬ</a>
 						</li>
 					</ul>
 				</div>
@@ -1120,11 +1120,12 @@
 				<h4>Чтобы мы могли отправить Вам шаблон</h4>
 				<form action="kitsend.php" method="POST" id="b-form-1" data-block="#b-popup-2">
 					<div class="b-popup-form">
-						<input type="text" id="email" name="email" required/>
+						<input type="email" id="email" name="email" required/>
 						<input type="hidden" name="subject" value="Заказ шаблона"/>
 						<input type="hidden" name="kit" class="b-kit-input"/>
 						<input type="hidden" name="price" class="b-price-input"/>
-						<input type="submit" class="ajax b-orange-butt" value="Заказать">
+						<input type="hidden" name="template" class="b-template-input"/>
+						<input type="submit" class="b-orange-butt" value="Заказать">
 					</div>
 				</form>
 			</div>

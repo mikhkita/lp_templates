@@ -97,7 +97,7 @@ $(document).ready(function(){
         $(".b-popup h2").text(el.parents(".example-page").find(".buy").attr("data-value"));
         $(".b-popup .maket-thumb").attr("src","images/"+el.parents(".example-page").find(".buy").attr("data-img")+"-thumb.jpg");
         $("#maket").attr("src","images/"+el.parents(".example-page").find(".buy").attr("data-img")+".jpg");
-        $(".b-buy-butt").attr("data-value",el.parents(".example-page").find(".buy").attr("data-value")).attr("data-name","Шаблон");
+        $(".b-buy-butt").attr("data-value",el.parents(".example-page").find(".buy").attr("data-value")).attr("data-template",el.parents(".example-page").find(".buy").attr("data-template")).attr("data-name","Шаблон");
 
         var $cont = el.parents(".example-page");
 
@@ -119,6 +119,7 @@ $(document).ready(function(){
         });
 
         $(".b-kit-input").val(string.join(", "));
+        $(".b-template-input").val(el.attr("data-template"));
         if($cont.hasClass("b8-sentence")) {
            $(".b-price-input").val($cont.find(".template-price").text()+"999"); 
         } else $(".b-price-input").val($cont.find(".template-price").text()+"000");
@@ -133,7 +134,8 @@ $(document).ready(function(){
         });
 
         $(".b-kit-input").val(string.join(", "));
-        $(".b-price-input").val($cont.find(".template-price").text());
+        $(".b-template-input").val(el.attr("data-template"));
+        $(".b-price-input").val($cont.find(".template-price").text()+"000");
     };
 
     $(".category-checkbox,.category-checkbox1").change(function(){

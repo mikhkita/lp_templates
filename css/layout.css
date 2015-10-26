@@ -1118,7 +1118,7 @@ input.error,textarea.error{
 		font-size: 20px;
 		margin-bottom: 20px;
 	}
-	.b-popup-1 input[type="text"]{
+	.b-popup-1 input[type="text"],.b-popup-1 input[type="email"]{
 		width: 300px;
 		padding: 10px 20px;
 		border-radius: 3px;
