@@ -1,6 +1,6 @@
 <?php
 	require_once("phpmail.php");
-	if( isset($_POST['price']) || isset($_POST['name']) || isset($_POST['detail'])){
+	if( isset($_POST['price']) || isset($_POST['1-name']) || isset($_POST['name']) ) {
 		$email_admin = "p_e_a_c_e@mail.ru";
 		// $email_admin = "soc.taxi.35@gmail.com";
 
@@ -38,30 +38,32 @@
 		$message .= "</div>";
 		send_mime_mail("Сайт ".$from,$email_from,$name,$email_admin,'UTF-8','UTF-8',$subject,$message,true);
 
-		$mrh_login = "LPTemplates";
-		$mrh_pass1 = "qwerty123";
-		$shp_add = "Add";
-		$shp_template = $_POST['template'];
-		$shp_email = $_POST['email'];
-		if($_POST['kit']) {
-			if(strripos($_POST['kit'],'ключевиков')) {
-				$shp_add .= "key";
+		if( isset($_POST['price']) ){
+			$mrh_login = "LPTemplates";
+			$mrh_pass1 = "qwerty123";
+			$shp_add = "Add";
+			$shp_template = $_POST['template'];
+			$shp_email = $_POST['email'];
+			if($_POST['kit']) {
+				if(strripos($_POST['kit'],'ключевиков')) {
+					$shp_add .= "key";
+				}
+				if(strripos($_POST['kit'],'продаж')) {
+					$shp_add .= "script";
+				}
+				if(strripos($_POST['kit'],'кит')) {
+					$shp_add .= "kit";
+				}
 			}
-			if(strripos($_POST['kit'],'продаж')) {
-				$shp_add .= "script";
-			}
-			if(strripos($_POST['kit'],'кит')) {
-				$shp_add .= "kit";
-			}
+			$inv_desc = $_POST['1-name'].": ".$_POST['1'];
+			$out_summ = $_POST['price'];
+			$email = $_POST['email'];
+			$inv_id = 0;
+			$culture = "ru";
+			$encoding = "utf-8";
+			$crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_add=$shp_add:Shp_email=$shp_email:Shp_template=$shp_template");
+			header("Location: https://auth.robokassa.ru/Merchant/Index.aspx?MrchLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&Desc=$inv_desc&Email=$email&Culture=$culture&Encoding=$encoding&Shp_add=$shp_add&Shp_email=$shp_email&Shp_template=$shp_template&SignatureValue=$crc&IsTest=1");
 		}
-		$inv_desc = $_POST['1-name'].": ".$_POST['1'];
-		$out_summ = $_POST['price'];
-		$email = $_POST['email'];
-		$inv_id = 0;
-		$culture = "ru";
-		$encoding = "utf-8";
-		$crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_add=$shp_add:Shp_email=$shp_email:Shp_template=$shp_template");
-		header("Location: https://auth.robokassa.ru/Merchant/Index.aspx?MrchLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&Desc=$inv_desc&Email=$email&Culture=$culture&Encoding=$encoding&Shp_add=$shp_add&Shp_email=$shp_email&Shp_template=$shp_template&SignatureValue=$crc&IsTest=1");
 	} elseif($_REQUEST["OutSum"]) {
 
 		$mrh_pass2 = "qwerty321";  

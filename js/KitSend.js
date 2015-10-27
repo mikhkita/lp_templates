@@ -201,11 +201,11 @@ $(document).ready(function(){
 			  	data:  $this.serialize(),
 				success: function(msg){
 					var $form;
-					if( msg == "1" ){
+					// if( msg == "1" ){
 						$form = $thanks;
-					}else{
-						$form = $("#b-popup-error");
-					}
+					// }else{
+						// $form = $("#b-popup-error");
+					// }
 
 					if( $this.attr("data-afterAjax") && customHandlers[$this.attr("data-afterAjax")] ){
 						customHandlers[$this.attr("data-afterAjax")]($this);

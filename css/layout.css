@@ -246,6 +246,7 @@ h1,h2,h3,h4,h5,h6 {
 .b-4 {
 	background: url(../images/fon_b4.jpg);
 	background-position: center;
+	background-size: cover;
 	text-align: center;
 }
 	.b-4 .b-block {
