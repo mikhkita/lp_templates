@@ -47,6 +47,20 @@ function fancyOpen(el){
                 $('.fancybox-inner').css('height','auto');
             // },200);
         },
+        afterClose: function() {
+        	setTimeout(function(){$.fancybox( $("#b-popup-detail"),{
+        		padding : 0,
+				fitToView: false,
+				tpl: {
+					closeBtn : '<a title="Закрыть" class="fancybox-item fancybox-close popup-close" href="javascript:;"></a>'
+				},
+				helpers: {
+		         	overlay: {
+		            	locked: true 
+		         	}
+		      	},
+        	});}, 1);
+        },
         padding:0
     }); 
     $('html').addClass('fancybox-lock'); 
@@ -100,7 +114,7 @@ $(document).ready(function(){
 	            	locked: true 
 	         	}
 	      	},
-			beforeShow: function(){
+			beforeLoad: function(){
 				$popup.find(".custom-field").remove();
 				if( $this.attr("data-value") ){
 					var name = getNextField($popup.find("form"));
