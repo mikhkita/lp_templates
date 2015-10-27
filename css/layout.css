@@ -497,6 +497,10 @@ h1,h2,h3,h4,h5,h6 {
 		background: url(../images/b7_fon9.jpg) no-repeat;
 		background-position: center;
 	}
+	.ep10 {
+		background: url(../images/b7_fon10.jpg) no-repeat;
+		background-position: center;
+	}
 	.page-head {
 		display: table-cell;
 	}
@@ -991,12 +995,17 @@ h1,h2,h3,h4,h5,h6 {
 				}
 		.b-popup > .right .popup-tabs-content {
 
-padding: 37px 40px 32px 20px;
+padding: 37px 25px 32px 20px;
 
 margin-right: 1px;
 
 background-color: #fff;
 
+max-height: 216px;
+
+overflow: auto;
+
+box-sizing: border-box;
 }
 			.b-popup > .right .popup-tabs-content img{
 			
@@ -1094,8 +1103,7 @@ label.error{
 	display: none !important;
 }
 input.error,textarea.error{
-	border: 1px solid #ff636b !important;
-	color: #ff636b;
+	border: 1px solid red !important;
 }
 .fancybox-inner{
 	overflow: visible !important;
@@ -1149,3 +1157,108 @@ input.error,textarea.error{
 		text-align:left;
 		margin-bottom:20px;
 	}
+
+.fancybox-skin {
+	background: none;
+}
+.new-popup {
+	width: 375px;
+	box-sizing: border-box;
+	border-radius: 12px;
+	box-shadow: inset 0px 0px 0px 10px rgba(255,255,255,0.4);
+	background-image: url("../images/back-new-popup.jpg");
+	background-size: cover;
+	padding: 42px;
+	text-align: center;
+}
+	.new-popup h3{
+		font-size: 24px;
+		font-family: "robotomedium";
+		color: rgb(255, 255, 255);
+		line-height: 1.2;
+		margin-bottom: 29px;
+	}
+	.new-popup h4{
+		font-size: 18px;
+		font-family: "robotothin";
+		color: rgb(255, 255, 255);
+		line-height: 1.2;
+		padding-bottom: 32px;
+		border-bottom: 1px solid #fff;
+	}
+	.new-popup .b-popup-form{
+		margin: 34px 0 12px;
+	}
+	.new-popup .b-popup-form input[type=text]{
+		border-radius: 5px;
+		width: 277px;
+		border: 1px solid #fff;
+		box-sizing: border-box;
+		padding: 6px 0;
+		margin-bottom: 7px;
+		text-align: center;
+		font-size: 16px;
+		font-family: "robotolight";
+	}
+	.new-popup .b-popup-form input[type=submit]{		
+		width: 277px;				
+		font-size: 20px;				
+		font-family: "robotolight";				
+		margin-left: 0;				
+		border-radius: 8px;				
+		margin-top: 14px;				
+		text-transform: uppercase; 				
+		padding: 7px 0px;				
+		display: inline-block;				
+		color: #fff;
+		cursor: pointer;
+	}
+.new-popup.detail {
+	width: 407px;
+}
+	.new-popup.detail h5{
+		font-size: 18px;
+		font-family: "robotothin";
+		color: rgb(255, 255, 255);
+		line-height: 1.2;
+		text-align: left;
+		margin-top: 19px;
+		margin-bottom: 24px;
+	}
+	.new-popup.detail input[type="checkbox"] {
+		display: none;
+	}
+	.new-popup.detail label {
+		font-size: 16px;
+		font-family: "robotothin";
+		color: rgb(255, 255, 255);
+		line-height: 1.25;
+		display: block;
+		position: relative;
+		padding-left: 43px;
+		margin-bottom: 9px;
+		cursor: pointer;
+		text-align: left;
+	}
+		.new-popup.detail label:before {
+			position: absolute;
+			font-size: 0;
+			content: "";
+			width: 18px;
+			height: 18px;
+			background:none;
+			border: 1px solid #fff;
+			left: 5px;
+			top: 0px;
+			border-radius: 4px;
+		}
+		.new-popup.detail input:checked + label:before {
+			background-color: #00eab5;
+		}
+	.new-popup.detail .b-popup-form input[type=submit] {
+	    margin-top: 40px;
+	}
+
+
+
+

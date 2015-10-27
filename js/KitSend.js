@@ -128,6 +128,49 @@ $(document).ready(function(){
 		});
 	});
 
+	$(".new-popup1").each(function(){
+		var $popup = $($(this).attr("data-block")),
+			$this = $(this);
+		$this.fancybox({
+			padding : 0,
+			content : $popup,
+			fitToView: false,
+			tpl: {
+				closeBtn : '<a title="Закрыть" class="fancybox-item fancybox-close new-popup-close" href="javascript:;"></a>'
+			},
+			helpers: {
+	         	overlay: {
+	            	locked: true 
+	         	}
+	      	},
+			beforeShow: function(){
+				$popup.find(".custom-field").remove();
+				if( $this.attr("data-value") ){
+					var name = getNextField($popup.find("form"));
+					$popup.find("form").append("<input type='hidden' class='custom-field' name='"+name+"' value='"+$this.attr("data-value")+"'/><input type='hidden' class='custom-field' name='"+name+"-name' value='"+$this.attr("data-name")+"'/>");
+				}
+				if( $this.attr("data-beforeShow") && customHandlers[$this.attr("data-beforeShow")] ){
+					customHandlers[$this.attr("data-beforeShow")]($this);
+				}
+			},
+			afterShow: function(){
+				if( $this.attr("data-afterShow") && customHandlers[$this.attr("data-afterShow")] ){
+					customHandlers[$this.attr("data-afterShow")]($this);
+				}
+			},
+			beforeClose: function(){
+				if( $this.attr("data-beforeClose") && customHandlers[$this.attr("data-beforeClose")] ){
+					customHandlers[$this.attr("data-beforeClose")]($this);
+				}
+			},
+			afterClose: function(){
+				if( $this.attr("data-afterClose") && customHandlers[$this.attr("data-afterClose")] ){
+					customHandlers[$this.attr("data-afterClose")]($this);
+				}
+			}
+		});
+	});
+
 	$(".b-go").click(function(){
 		var block = $( $(this).attr("data-block") ),
 			off = $(this).attr("data-offset")||0;

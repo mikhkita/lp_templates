@@ -1,6 +1,6 @@
 <?php
 	require_once("phpmail.php");
-	if( isset($_POST['price']) ){
+	if( isset($_POST['price']) || isset($_POST['name']) || isset($_POST['detail'])){
 		$email_admin = "p_e_a_c_e@mail.ru";
 		// $email_admin = "soc.taxi.35@gmail.com";
 
@@ -31,6 +31,9 @@
 
 		foreach ($fields  as $key => $value){
 			$message .= "<div><p><b>".$key.": </b>".$value."</p></div>";
+		}
+		if( isset($_POST['detail']) ) {
+			$message .= "<div><p><b>Тема: </b>".implode(",",$_POST['detail'])."</p></div>";
 		}
 		$message .= "</div>";
 		send_mime_mail("Сайт ".$from,$email_from,$name,$email_admin,'UTF-8','UTF-8',$subject,$message,true);
@@ -91,14 +94,14 @@
 			$files = array();
 			array_push($files, dirname(__FILE__)."/".$shp_template.".zip");
 			if(strripos($_REQUEST["Shp_add"],'key')) {
-				array_push($files, dirname(__FILE__)."/key.docx");
+				array_push($files, dirname(__FILE__)."/".$shp_template."_key.xlsx");
 			}
 			if(strripos($_REQUEST["Shp_add"],'script')) {
-				array_push($files, dirname(__FILE__)."/script.doc");
+				array_push($files, dirname(__FILE__)."/".$shp_template."_script.doc");
 			}
-			if(strripos($_REQUEST["Shp_add"],'kit')) {
-				array_push($files, dirname(__FILE__)."/kit.doc");
-			}
+			// if(strripos($_REQUEST["Shp_add"],'kit')) {
+			// 	array_push($files, dirname(__FILE__)."/kit.doc");
+			// }
 			XMail("Сайт ".$from,$email_from,$name,$email_admin,'UTF-8','UTF-8',$subject,$message,$files,true);
 			echo "OK" . $inv_id;
 			exit();
