@@ -1,8 +1,7 @@
 <?php
 	require_once("phpmail.php");
 	if( isset($_POST['price']) || isset($_POST['1-name']) || isset($_POST['name']) ) {
-		$email_admin = "p_e_a_c_e@mail.ru";
-		// $email_admin = "soc.taxi.35@gmail.com";
+		$email_admin = "igor@line-up.ru";
 
 		$from = "“LP Templates”";
 		$email_from = "robot@LpTemplates.ru";
@@ -96,13 +95,19 @@
 			$files = array();
 			array_push($files, dirname(__FILE__)."/".$shp_template.".zip");
 			if(strripos($_REQUEST["Shp_add"],'key')) {
-				array_push($files, dirname(__FILE__)."/".$shp_template."_key.xlsx");
+				if($shp_template!="all_templates") {
+					array_push($files, dirname(__FILE__)."/".$shp_template."_key.xlsx");
+				} else array_push($files, dirname(__FILE__)."/".$shp_template."_key.zip");
 			}
 			if(strripos($_REQUEST["Shp_add"],'script')) {
-				array_push($files, dirname(__FILE__)."/".$shp_template."_script.doc");
+				if($shp_template!="all_templates") {
+					array_push($files, dirname(__FILE__)."/".$shp_template."_script.doc");
+				} else array_push($files, dirname(__FILE__)."/".$shp_template."_script.zip");
 			}
 			// if(strripos($_REQUEST["Shp_add"],'kit')) {
+				// if($shp_template!="all_templates") {
 			// 	array_push($files, dirname(__FILE__)."/kit.doc");
+				// } else array_push($files, dirname(__FILE__)."/".$shp_template."_kit.zip");
 			// }
 			XMail("Сайт ".$from,$email_from,$name,$email_admin,'UTF-8','UTF-8',$subject,$message,$files,true);
 			echo "OK" . $inv_id;
