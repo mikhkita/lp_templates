@@ -1121,6 +1121,7 @@ input.error,textarea.error{
 }
 	.b-popup-1 h3{
 		font-size: 25px;
+		font-family: "robotomedium";
 		margin-bottom: 20px;
 	}
 	.b-popup-1 h4{
@@ -1154,9 +1155,16 @@ input.error,textarea.error{
 .b-popup-text {
 	width: 600px;
 }
+
 	.b-popup-text p {
 		text-align:left;
 		margin-bottom:20px;
+	}
+	.b-popup-text h5 {
+		font-size: 20px;
+		font-family: "robotomedium";
+		margin-bottom: 20px;
+		text-align: left;
 	}
 
 .fancybox-skin {
@@ -1190,16 +1198,20 @@ input.error,textarea.error{
 	.new-popup .b-popup-form{
 		margin: 34px 0 12px;
 	}
-	.new-popup .b-popup-form input[type=text]{
+	.new-popup .b-popup-form input[type=text],.new-popup .b-popup-form textarea{
 		border-radius: 5px;
 		width: 277px;
 		border: 1px solid #fff;
 		box-sizing: border-box;
-		padding: 6px 0;
+		padding: 6px 10px;
 		margin-bottom: 7px;
 		text-align: center;
 		font-size: 16px;
 		font-family: "robotolight";
+	}
+	.new-popup .b-popup-form textarea {
+		height: 105px;
+		resize:none;
 	}
 	.new-popup .b-popup-form input[type=submit]{		
 		width: 277px;				
