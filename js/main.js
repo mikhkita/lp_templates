@@ -83,13 +83,19 @@ $(document).ready(function(){
     $("#b-categories li").click(function(){
         if( !$(this).hasClass("more") ) {
             var cat = $(this).attr("data-cat");
+            if(cat=="c-all") $(".show_more").show(); else $(".show_more").hide();
 
             $("#b-categories li.active").removeClass("active");
             $(this).addClass("active");
 
             $("#b-catalog-list>li").hide();
-            $("#b-catalog-list>li."+cat).fadeIn(300);
+            $("#b-catalog-list>li."+cat+":lt(9)").fadeIn(300);
         }
+        return false;
+    });
+    $(".show_more a").click(function(){
+        $("#b-catalog-list>li:gt(8)").fadeIn(300);
+        $(".show_more").hide();
         return false;
     });
 

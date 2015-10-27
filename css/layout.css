@@ -516,6 +516,7 @@ h1,h2,h3,h4,h5,h6 {
 		height: 50px;
 		display: table-cell;
 		vertical-align: middle;
+		cursor: default;
 	}
 	.page-price {
 		font-family: 'robotolight';
@@ -600,13 +601,14 @@ h1,h2,h3,h4,h5,h6 {
 					border: 2px solid #049873;
 				}
 	.show_more {
-		margin: 6% 33%;
+		margin-top: 63px;
+		text-align: center;
 	}		
-		.show_more a {
+		.show_more a{
 			font-family: 'robotolight';
 			font-size: 120%;
 			padding: 10px 50px;
-			display: block;
+			display: inline-block;
 			border: 2px solid #00ca97;
 			border-radius: 3px;
 			font-weight: bold;
@@ -618,7 +620,9 @@ h1,h2,h3,h4,h5,h6 {
 				background-color: #00ca97;
 				color: #fff;
 			}
-
+.b-7 .b-block {
+	padding-bottom: 63px;
+}
 .b-8 {
 	background: url(../images/b8_fon.jpg) no-repeat;
 	background-position: center;
@@ -1271,7 +1275,9 @@ input.error,textarea.error{
 	.new-popup.detail .b-popup-form input[type=submit] {
 	    margin-top: 40px;
 	}
-
+#b-catalog-list li:nth-child(n+10) {
+	display: none;
+}
 
 
 
