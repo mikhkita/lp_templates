@@ -39,7 +39,7 @@
 
 		if( isset($_POST['price']) ){
 			$mrh_login = "LPTemplates";
-			$mrh_pass1 = "qwerty123";
+			$mrh_pass1 = "EpkWw06F";
 			$shp_add = "Add";
 			$shp_template = $_POST['template'];
 			$shp_email = $_POST['email'];
@@ -61,11 +61,11 @@
 			$culture = "ru";
 			$encoding = "utf-8";
 			$crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_add=$shp_add:Shp_email=$shp_email:Shp_template=$shp_template");
-			header("Location: https://auth.robokassa.ru/Merchant/Index.aspx?MrchLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&Desc=$inv_desc&Email=$email&Culture=$culture&Encoding=$encoding&Shp_add=$shp_add&Shp_email=$shp_email&Shp_template=$shp_template&SignatureValue=$crc&IsTest=1");
+			header("Location: https://auth.robokassa.ru/Merchant/Index.aspx?MrchLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&Desc=$inv_desc&Email=$email&Culture=$culture&Encoding=$encoding&Shp_add=$shp_add&Shp_email=$shp_email&Shp_template=$shp_template&SignatureValue=$crc");
 		}
 	} elseif($_REQUEST["OutSum"]) {
 
-		$mrh_pass2 = "qwerty321";  
+		$mrh_pass2 = "4DsC7qnT";  
 		$out_summ = $_REQUEST["OutSum"];
 		$inv_id = $_REQUEST["InvId"];
 		$shp_add = $_REQUEST["Shp_add"];
