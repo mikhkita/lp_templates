@@ -166,6 +166,7 @@ h1,h2,h3,h4,h5,h6 {
 				padding-bottom: 10px;	
 			}
 			.b2-head-info h2 {
+				max-height: 10000px;
 				font-family: 'robotoregular';
 				font-size: 32px;
 			}
@@ -776,6 +777,7 @@ h1,h2,h3,h4,h5,h6 {
 	margin-bottom: 80px;
 }
 	.b10-content .question {
+		max-height: 10000px;
 		font-family: 'robotolight';
 		font-size: 24px;
 		text-transform: uppercase;
@@ -807,6 +809,7 @@ h1,h2,h3,h4,h5,h6 {
 			color: #00a77c;
 		}
 		.b10-content .answer {
+			max-height: 10000px;
 			border: 1px solid #a3a3a3;
 			border-radius: 3px;
 			margin-bottom: 35px;
