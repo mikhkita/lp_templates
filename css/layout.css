@@ -62,6 +62,10 @@ body {
 	position: relative;
 }
 
+body{
+	min-width: 1100px;
+}
+
 a {
 	text-decoration: none;
 }
