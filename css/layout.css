@@ -599,7 +599,7 @@ h1,h2,h3,h4,h5,h6 {
 			.buy{
 				background-color: #00c997;
 				border: 2px solid #00c997;
-				margin-left: 10px;
+				margin-left: 9px;
 			}
 				.buy:hover{
 					background-color: #049873;
