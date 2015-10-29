@@ -61,7 +61,7 @@
 					<p class="b-contact-p-teh">Техническая поддержка</p>
 				</div>
 				<div class="b-contact-img left">
-					<a href="#" class="new-popup1" data-block="#b-popup-mail"><img src="images/massege.jpg"></a>
+					<a href="#" class="new-popup1" data-block="#b-popup-support"><img src="images/massege.jpg"></a>
 				</div>
 			</div>
 		</div>
@@ -1102,9 +1102,9 @@
 					<li class="list-left left">
 						<span>8 (812) 633 35 88</span>
 						<br>
-						<a href="#">Отправить письмо</a>
+						<a href="#" class="new-popup1" data-block="#b-popup-mail">Отправить письмо</a>
 						<br>
-						<a href="#">Пожаловаться в отдел качества</a>
+						<a href="#" class="new-popup1" data-block="#b-popup-quality">Пожаловаться в отдел качества</a>
 						<br>
 						<p>&copy;2015 LineUp</p>
 					</li>
@@ -1322,17 +1322,48 @@
 				</form>
 			</div>
 		</div>
-		<div id="b-popup-mail">
+		<div id="b-popup-support">
 			<div class="for_all new-popup">
-				<h3>Есть вопросы?</h3>
-				<h4>Задайте нам интересующий вас вопрос и мы ответим Вам в ближайшее время</h4>
+				<h3>Обращение в тех<br>поддержку</h3>
+				<h4>Оставьте заявку и мы свяжемся с Вами</h4>
 				<form action="kitsend.php" method="POST" id="b-form-1" data-block="#b-popup-2">
 					<div class="b-popup-form">
-						<input type="text" name="name" required placeholder="Имя"/>
+						<input type="text" name="name" required placeholder="Ваше имя"/>
 						<input type="text" name="email" required placeholder="E-mail"/>
 						<textarea name="1" placeholder="Комментарий"></textarea>
 						<input type="hidden" name="1-name" value="Комментарий"/>
-						<input type="hidden" name="subject" value="Вам письмо"/>
+						<input type="hidden" name="subject" value="Обращение в тех. поддержку"/>
+						<input type="submit" class="buy ajax b-orange-butt" value="Отправить">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="b-popup-mail">
+			<div class="for_all new-popup">
+				<h3>Отправить письмо</h3>
+				<h4>Напишите нам и мы обязательно ответим</h4>
+				<form action="kitsend.php" method="POST" id="b-form-1" data-block="#b-popup-2">
+					<div class="b-popup-form">
+						<input type="text" name="name" required placeholder="Ваше имя"/>
+						<input type="text" name="email" required placeholder="E-mail"/>
+						<textarea name="1" placeholder="Комментарий"></textarea>
+						<input type="hidden" name="1-name" value="Комментарий"/>
+						<input type="hidden" name="subject" value="Письмо"/>
+						<input type="submit" class="buy ajax b-orange-butt" value="Отправить">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="b-popup-quality">
+			<div class="for_all new-popup">
+				<h3>Пожаловаться<br>в отдел качества</h3>
+				<form action="kitsend.php" method="POST" id="b-form-1" data-block="#b-popup-2">
+					<div class="b-popup-form">
+						<input type="text" name="name" required placeholder="Ваше имя"/>
+						<input type="text" name="email" required placeholder="E-mail"/>
+						<textarea name="1" placeholder="Комментарий"></textarea>
+						<input type="hidden" name="1-name" value="Комментарий"/>
+						<input type="hidden" name="subject" value="Жалоба в отдел качества"/>
 						<input type="submit" class="buy ajax b-orange-butt" value="Отправить">
 					</div>
 				</form>

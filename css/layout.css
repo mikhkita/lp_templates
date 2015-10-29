@@ -1179,7 +1179,7 @@ input.error,textarea.error{
 	background: none;
 }
 .new-popup {
-	width: 375px;
+	width: 415px;
 	box-sizing: border-box;
 	border-radius: 12px;
 	box-shadow: inset 0px 0px 0px 10px rgba(255,255,255,0.4);
@@ -1280,6 +1280,9 @@ input.error,textarea.error{
 	    margin-top: 40px;
 	}
 #b-catalog-list li:nth-child(n+10) {
+	display: none;
+}
+.new-popup-close {
 	display: none;
 }
 
