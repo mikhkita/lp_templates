@@ -123,6 +123,9 @@ $(document).ready(function(){
 				if( $this.attr("data-beforeShow") && customHandlers[$this.attr("data-beforeShow")] ){
 					customHandlers[$this.attr("data-beforeShow")]($this);
 				}
+				if( $this.attr("data-video") ){
+					$("#b-popup-video").html('<iframe width="800" height="500" src="https://www.youtube.com/embed/'+$this.attr("data-video")+'?autoplay=1" frameborder="0" allowfullscreen></iframe>');
+				}
 			},
 			afterShow: function(){
 				if( $this.attr("data-afterShow") && customHandlers[$this.attr("data-afterShow")] ){
@@ -138,6 +141,9 @@ $(document).ready(function(){
 				if( $this.attr("data-afterClose") && customHandlers[$this.attr("data-afterClose")] ){
 					customHandlers[$this.attr("data-afterClose")]($this);
 				}
+				if( $this.attr("data-video") ){
+					$("#b-popup-video").empty();
+				}
 			}
 		});
 	});
@@ -150,7 +156,7 @@ $(document).ready(function(){
 			content : $popup,
 			fitToView: false,
 			tpl: {
-				closeBtn : '<a title="Закрыть" class="fancybox-item fancybox-close new-popup-close" href="javascript:;"></a>'
+				closeBtn : '<a title="Закрыть" class="fancybox-item fancybox-close popup-close" href="javascript:;"></a>'
 			},
 			helpers: {
 	         	overlay: {

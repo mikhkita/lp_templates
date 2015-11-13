@@ -110,9 +110,13 @@ $(document).ready(function(){
         $(".b-popup").find(".b-asd").prop('checked', false);
 
         $cont.find("input:checked").each(function(){
-            $(".b-popup").find("#"+$(this).attr("data-id")).prop('checked', true);
+            $("#b-popup-detail .b-popup").find("#"+$(this).attr("data-id")).prop('checked', true);
         });
-        $(".b-popup").find(".template-price").text($cont.find(".template-price").text());
+        $("#b-popup-detail .b-popup").find("label").show();
+        $cont.find("label.disabled input").each(function(){
+            $("#b-popup-detail .b-popup").find("label[for='"+$(this).attr("data-id")+"']").hide();
+        });
+        $("#b-popup-detail .b-popup").find(".template-price").text($cont.find(".template-price").text());
 
     };
 
@@ -128,7 +132,7 @@ $(document).ready(function(){
         $(".b-template-input").val(el.attr("data-template"));
         if($cont.hasClass("b8-sentence")) {
            $(".b-price-input").val($cont.find(".template-price").text()+"999"); 
-        } else $(".b-price-input").val($cont.find(".template-price").text()+"000");
+        } else $(".b-price-input").val($cont.find(".template-price").text()+"900");
     };
 
     customHandlers["popup-buy-1"] = function(el){
@@ -141,7 +145,7 @@ $(document).ready(function(){
 
         $(".b-kit-input").val(string.join(", "));
         $(".b-template-input").val(el.attr("data-template"));
-        $(".b-price-input").val($cont.find(".template-price").text()+"000");
+        $(".b-price-input").val($cont.find(".template-price").text()+"900");
     };
 
     $(".category-checkbox,.category-checkbox1").change(function(){
@@ -183,7 +187,7 @@ $(document).ready(function(){
         } else $price.text( ($price.text()*1)-($(this).attr("data-price")*1) );
     });
 
-    $(".b-4 .b-block").slick({
+    $(".b-4 .b-block,.b2-head-info").slick({
         autoplay: true,
         dots: true,
         arrows: false,
